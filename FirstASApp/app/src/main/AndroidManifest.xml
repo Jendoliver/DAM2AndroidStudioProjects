@@ -19,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        ,
         <!-- Para anadir servicios, como notificaciones sin la app abierta, se abriria aqui un bloque de <services> -->
     </application>
 
