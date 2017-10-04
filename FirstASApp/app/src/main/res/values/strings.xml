@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">FirstASApp</string>
-    <string name="converted_main">Ola?????</string>
+    <string name="tvMain">Hell000000</string>
+    <string name="btnDefault">Default</string>
+    <string name="btnDefaultClick">Yooo yeeee what petsodydass</string>
+    <string name="btnDefaultLongClick">Yesss clicking longy longui languy retarded</string>
+    <string name="btnText">Text</string>
+    <string name="inputText">Write and click TEXT</string>
+    <string name="btnRed">RED</string>
+    <string name="btnGreen">GREEN</string>
+    <string name="btnBlue">BLUE</string>
 </resources>
