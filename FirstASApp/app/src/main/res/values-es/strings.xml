@@ -1,4 +1,5 @@
 <resources>
+    <!-- MainActivity -->
     <string name="app_name">PrimerAPP</string>
     <string name="tvMain">0l@@@@fff</string>
     <string name="btnDefault">Defecto</string>
@@ -9,4 +10,8 @@
     <string name="btnRed">ROJO</string>
     <string name="btnGreen">VERDE</string>
     <string name="btnBlue">AZUL</string>
+    <string name="btnTelephone">LLAMAME</string>
+
+    <!-- SecondActivity -->
+    <string name="title_activity_second">SegundaEctividad</string>
 </resources>

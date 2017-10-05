@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_olga"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2">
 
         <Button
             android:id="@+id/btn1"
@@ -81,5 +82,13 @@
             android:layout_weight="1"
             android:text="@string/btnBlue" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btnTelephone" />
 
 </RelativeLayout>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.apporelbotna.firstasapp" >
+    package="com.apporelbotna.firstasapp">
 
-    <uses-permission android:name="android.permission.CAMERA"/> <!-- Classic "Esta aplicacion pide permisos para utilizar..." -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Classic "Esta aplicacion pide permisos para utilizar..." -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" > <!-- Ruta relativa a la clase dentro del package (com.apporelbotna.firstapp.MainActivity) -->
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"> <!-- Ruta relativa a la clase dentro del package (com.apporelbotna.firstapp.MainActivity) -->
             <intent-filter> <!-- Este bloque sirve para declarar MainActivity como la primera que se visualiza al iniciar la aplicacion -->
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <!-- Para anadir servicios, como notificaciones sin la app abierta, se abriria aqui un bloque de <services> -->
+        <activity
+            android:name=".SecondActivity"
+            android:label="@string/title_activity_second"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
