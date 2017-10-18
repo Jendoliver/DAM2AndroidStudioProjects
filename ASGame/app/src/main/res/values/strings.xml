@@ -1,0 +1,14 @@
+<resources>
+    <!-- MAIN -->
+    <string name="mainSubtitle">The Retarded Legend</string>
+    <string name="mainPlayBtn">Play!</string>
+    <string name="mainRankingBtn">Ranking</string>
+    <string name="mainSettingsBtn">Settings</string>
+    <string name="mainAboutUsBtn">About us</string>
+    <!-- SETTINGS -->
+    <string name="app_name">ASGame</string>
+    <string name="settings">Settings</string>
+    <string name="settingsName">Name:</string>
+    <string name="settingsTakePhoto">Take photo</string>
+    <string name="settingsAddPhoto">Select from gallery</string>
+</resources>

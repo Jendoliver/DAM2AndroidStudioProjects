@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="com.apporelbotna.asgame.MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:fontFamily="casual"
+        android:text="PHAT PEPE"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvSubtitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        tools:text="@string/mainSubtitle"
+        android:layout_below="@+id/tvTitleMain"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnPlayMain"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSubtitleMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/background_dark"
+        android:fontFamily="casual"
+        android:text="@string/mainPlayBtn"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/btnRankingMain"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnPlayMain"
+        android:layout_centerVertical="true"
+        android:background="@android:color/background_dark"
+        android:fontFamily="casual"
+        android:text="@string/mainRankingBtn"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/btnSettingsMain"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnRankingMain"
+        android:layout_below="@+id/btnRankingMain"
+        android:layout_marginTop="21dp"
+        android:background="@android:color/background_dark"
+        android:fontFamily="casual"
+        android:text="@string/mainSettingsBtn"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/btnAboutUsMain"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnSettingsMain"
+        android:layout_below="@+id/btnSettingsMain"
+        android:layout_marginTop="19dp"
+        android:background="@android:color/background_dark"
+        android:fontFamily="casual"
+        android:text="@string/mainAboutUsBtn"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>
