@@ -16,6 +16,7 @@
         android:layout_marginTop="13dp"
         android:fontFamily="casual"
         android:text="PHAT PEPE"
+        android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="50sp"
         android:textStyle="bold|italic" />
@@ -24,26 +25,26 @@
         android:id="@+id/tvSubtitleMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="TextView"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        tools:text="@string/mainSubtitle"
         android:layout_below="@+id/tvTitleMain"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:text="@string/mainSubtitle"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnPlayMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSubtitleMain"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
         android:background="@android:color/background_dark"
         android:fontFamily="casual"
         android:text="@string/mainPlayBtn"
-        android:textColor="@android:color/background_light" />
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/btnRankingMain"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnRankingMain"

@@ -16,6 +16,7 @@
         android:layout_marginTop="13dp"
         android:fontFamily="casual"
         android:text="PHAT PEPE"
+        android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="50sp"
         android:textStyle="bold|italic" />
@@ -24,13 +25,13 @@
         android:id="@+id/tvSubtitleMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="TextView"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        tools:text="@string/mainSubtitle"
         android:layout_below="@+id/tvTitleMain"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:text="@string/mainSubtitle"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnPlayMain"

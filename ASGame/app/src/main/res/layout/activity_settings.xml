@@ -8,7 +8,7 @@
     tools:context="com.apporelbotna.asgame.SettingsActivity">
 
     <TextView
-        android:id="@+id/tvSettingsTitle"
+        android:id="@+id/tvTitleSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,37 +22,36 @@
         android:textStyle="italic" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/etNameSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSettingsTitle"
+        android:layout_below="@+id/tvTitleSettings"
         android:layout_marginTop="75dp"
-        android:layout_toEndOf="@+id/tvSettingsName"
+        android:layout_toEndOf="@+id/tvNameSettings"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@android:color/background_light" />
 
     <TextView
-        android:id="@+id/tvSettingsName"
+        android:id="@+id/tvNameSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editTextName"
+        android:layout_alignBottom="@+id/etNameSettings"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/editTextName"
+        android:layout_alignTop="@+id/etNameSettings"
         android:layout_marginStart="24dp"
-        android:layout_toStartOf="@+id/tvSettingsTitle"
+        android:layout_toStartOf="@+id/tvTitleSettings"
         android:fontFamily="casual"
-        android:text="TextView"
+        android:text="@string/settingsName"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        tools:text="@string/settingsName" />
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/imgUser"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/editTextName"
+        android:layout_below="@+id/etNameSettings"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
         app:srcCompat="@android:drawable/star_big_on" />

@@ -8,7 +8,7 @@
     tools:context="com.apporelbotna.asgame.SettingsActivity">
 
     <TextView
-        android:id="@+id/tvSettingsTitle"
+        android:id="@+id/tvTitleSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,34 +22,34 @@
         android:textStyle="italic" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/etNameSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/btnGallery"
         android:layout_toStartOf="@+id/imgUser"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="@android:color/background_light" />
 
     <TextView
-        android:id="@+id/tvSettingsName"
+        android:id="@+id/tvNameSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imgUser"
         android:layout_marginEnd="48dp"
         android:layout_marginTop="21dp"
-        android:layout_toStartOf="@+id/tvSettingsTitle"
+        android:layout_toStartOf="@+id/tvTitleSettings"
         android:fontFamily="casual"
-        android:text="TextView"
+        android:text="@string/settingsName"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        tools:text="@string/settingsName" />
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/imgUser"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/tvSettingsTitle"
+        android:layout_below="@+id/tvTitleSettings"
         android:layout_marginTop="29dp"
         android:layout_toStartOf="@+id/btnGallery"
         app:srcCompat="@android:drawable/star_big_on" />
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/btnGallery"
-        android:layout_alignTop="@+id/tvSettingsName"
+        android:layout_alignTop="@+id/tvNameSettings"
         android:layout_marginEnd="33dp"
         android:background="@android:color/background_dark"
         android:fontFamily="casual"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnTakePhoto"
         android:layout_marginStart="11dp"
-        android:layout_toEndOf="@+id/tvSettingsTitle"
+        android:layout_toEndOf="@+id/tvTitleSettings"
         android:background="@android:color/background_dark"
         android:fontFamily="casual"
         android:text="@string/settingsAddPhoto"
