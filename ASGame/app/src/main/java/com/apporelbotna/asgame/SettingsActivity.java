@@ -66,7 +66,7 @@ public class SettingsActivity extends AppCompatActivity
                         MediaStore.Images.Media.INTERNAL_CONTENT_URI);
                 intent.setType("image/*");
                 intent.putExtra("return-data", true);
-                intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.setAction(Intent.ACTION_OPEN_DOCUMENT); // Use ACTION_OPEN_DOCUMENT to ensure that the app remembers its permissions to get the URI every time
                 if(intent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(intent, SELECT_IMAGE_REQUEST_CODE);
                 }
