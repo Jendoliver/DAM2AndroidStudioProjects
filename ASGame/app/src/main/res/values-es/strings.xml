@@ -1,0 +1,14 @@
+<resources>
+    <!-- MAIN -->
+    <string name="mainSubtitle">La Leyenda Retrasada</string>
+    <string name="mainPlayBtn">Jugar!</string>
+    <string name="mainRankingBtn">Ranking</string>
+    <string name="mainSettingsBtn">Opciones</string>
+    <string name="mainAboutUsBtn">Sobre nosotros</string>
+    <!-- SETTINGS -->
+    <string name="app_name">ASGame</string>
+    <string name="settings">Opciones</string>
+    <string name="settingsName">Nombre</string>
+    <string name="settingsTakePhoto">Hazte una pic!</string>
+    <string name="settingsAddPhoto">Galería</string>
+</resources>
