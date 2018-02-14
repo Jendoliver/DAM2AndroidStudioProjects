@@ -1,7 +1,9 @@
-package com.apporelbotna.asgame;
+package com.apporelbotna.asgame.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.apporelbotna.asgame.R;
 
 public class GameActivity extends AppCompatActivity {
 

@@ -1,31 +1,23 @@
-package com.apporelbotna.asgame;
+package com.apporelbotna.asgame.view;
 
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.apporelbotna.asgame.R;
+
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import static android.R.attr.bitmap;
 
 public class SettingsActivity extends AppCompatActivity
 {
@@ -42,11 +34,11 @@ public class SettingsActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        editTextName = (EditText) findViewById(R.id.etNameSettings);
-        imgUser = (ImageView) findViewById(R.id.imgUser);
+        editTextName = findViewById(R.id.etNameSettings);
+        imgUser = findViewById(R.id.imgUser);
 
         // Take photo to get imgUser
-        btnTakePhoto = (Button) findViewById(R.id.btnTakePhoto);
+        btnTakePhoto = findViewById(R.id.btnTakePhoto);
         btnTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +50,7 @@ public class SettingsActivity extends AppCompatActivity
         });
 
         // Open gallery to select imgUser
-        btnGallery = (Button) findViewById(R.id.btnGallery);
+        btnGallery = findViewById(R.id.btnGallery);
         btnGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,9 +89,9 @@ public class SettingsActivity extends AppCompatActivity
         String name = prefs.getString("name", ""); // 2nd argument = default value if can't get the value
         editTextName.setText(name);
         String imgUserURIString = prefs.getString("imgUserURI", null);
-        //if(imgUserURIString != null) {
+        if(imgUserURIString != null) {
             imgUser.setImageURI(Uri.parse(imgUserURIString));
-        //}
+        }
     }
 
     @Override

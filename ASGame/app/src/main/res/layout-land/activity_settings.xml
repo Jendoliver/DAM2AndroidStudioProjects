@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_dark"
-    tools:context="com.apporelbotna.asgame.SettingsActivity">
+    tools:context="com.apporelbotna.asgame.view.SettingsActivity">
 
     <TextView
         android:id="@+id/tvTitleSettings"

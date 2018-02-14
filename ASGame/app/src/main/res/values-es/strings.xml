@@ -11,4 +11,14 @@
     <string name="settingsName">Nombre</string>
     <string name="settingsTakePhoto">Hazte una pic!</string>
     <string name="settingsAddPhoto">Galería</string>
+    <!-- ABOUT US -->
+    <string name="aboutUsTitle">Sobre nosotros</string>
+    <string name="aboutUsDescription">Somos una divertida empresa, dedicados 24/7 a Phat Pepe, hoy conocido como PJS. Sus increíbles dotes de rapero no tienen precedentes, y con este juego queremos darlo a conocer a todo el mundo.</string>
+    <string name="aboutUsVideoDescription">Mira este video para saber más sobre Phat Pepe</string>
+    <!-- RANKING -->
+    <string name="rankingTitle">Ranking</string>
+    <string name="labelLevel">Nivel</string>
+
+    <!-- BUTTONS -->
+    <string name="clickHere">Pulsa aquí</string>
 </resources>

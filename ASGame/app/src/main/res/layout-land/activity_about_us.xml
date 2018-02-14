@@ -27,16 +27,14 @@
         android:id="@+id/tvAboutUsDescription"
         android:layout_width="306dp"
         android:layout_height="179dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="casual"
         android:text="@string/aboutUsDescription"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAboutUs" />
 
@@ -45,21 +43,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/background_dark"
         android:fontFamily="casual"
         android:text="@string/clickHere"
         android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/tvVideoDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvVideoDescription"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvVideoDescription"
-        android:layout_width="338dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="248dp"
+        android:layout_height="115dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -68,9 +67,7 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnPhatVideo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAboutUsDescription"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/tvAboutUsDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvAboutUs" />
 </android.support.constraint.ConstraintLayout>

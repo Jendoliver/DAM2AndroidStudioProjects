@@ -1,4 +1,4 @@
-package com.apporelbotna.asgame;
+package com.apporelbotna.asgame.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,17 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-/*
-Realitzar una aplicació Android que inclogui els següents elements:
-
-1) Una pantalla de benvinguda amb un menú d'opcions que contindrà les següents opcions: "Jugar", "Rànquing", "Ajustaments", "Quant a".
-
-2) Les dues primeres accions ens portaran a pàgines buides, que omplirem més endavant.
-
-3) La acció "Ajustaments" ens ha de permetre fixar el nom del jugador i assignar-li una foto.
-
-4) La pantalla "Quant a" serà de construcció i disseny lliure.
- */
+import com.apporelbotna.asgame.R;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -31,7 +21,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         // Open GameActivity
-        btnPlay = (Button) findViewById(R.id.btnPlayMain);
+        btnPlay = findViewById(R.id.btnPlayMain);
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         // Open RankingActivity
-        btnRanking = (Button) findViewById(R.id.btnRankingMain);
+        btnRanking = findViewById(R.id.btnRankingMain);
         btnRanking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         // Open SettingsActivity
-        btnSettings = (Button) findViewById(R.id.btnSettingsMain);
+        btnSettings = findViewById(R.id.btnSettingsMain);
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         // Open AboutUsActivity
-        btnAboutUs = (Button) findViewById(R.id.btnAboutUsMain);
+        btnAboutUs = findViewById(R.id.btnAboutUsMain);
         btnAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
-    tools:context="com.apporelbotna.asgame.SettingsActivity">
+    tools:context="com.apporelbotna.asgame.view.SettingsActivity">
 
     <TextView
         android:id="@+id/tvTitleSettings"
@@ -40,7 +40,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/etNameSettings"
         android:layout_marginStart="24dp"
-        android:layout_toStartOf="@+id/tvTitleSettings"
+        android:layout_toStartOf="@+id/imgUser"
         android:fontFamily="casual"
         android:text="@string/settingsName"
         android:textAlignment="center"
