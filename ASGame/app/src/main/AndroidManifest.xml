@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.SettingsActivity" />
-        <activity android:name=".view.GameActivity" />
+        <activity android:name=".view.GameActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".view.RankingActivity" />
         <activity android:name=".view.AboutUsActivity" />
         <activity android:name=".view.UserDetailsActivity"></activity>
