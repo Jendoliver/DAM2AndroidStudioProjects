@@ -25,6 +25,7 @@
     <!-- RANKING -->
     <string name="rankingTitle">Ranking</string>
     <string name="labelLevel">Level</string>
+    <string name="userScores">%s scores</string>
 
 
     <!-- GENERIC BUTTONS -->

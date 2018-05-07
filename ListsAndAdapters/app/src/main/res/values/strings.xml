@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">ListsAndAdapters</string>
+    <string name="hours">%1$dh</string>
+
+    <string-array name="samples">
+        <item>ArrayAdapter amb String[] en codi Java.</item>
+        <item>ArrayAdapter amb String[] en "strings.xml".</item>
+        <item>SimpleAdapter amb HashMap de dues línies de dades tretes de "strings.xml".</item>
+        <item>SimpleAdapter amb HashMap de vàries dades (diferents tipus) i layout propi. PERÒ NO POT MOSTRAR IMATGES SI VENEN DE DRAWABLE (és un defecte esperat per les limitacions de ArrayAdapter).</item>
+        <item>ArrayAdapter modificat amb estructura de dades pròpia (POJOs), dades diverses i layout propi.</item>
+        <item>Adapter propi sobre estructura de dades pròpia, dades diverses i layout propi.</item>
+        <item>Adapter propi sobre estructura de dades pròpia, dades diverses i layout propi, amb reciclatge de vistes i ViewHolder.</item>
+        <item>RecyclerView en comptes d\'un adaptador propi.</item>
+    </string-array>
+
+    <string-array name="items2">
+        <item>DAM-M01 SIN</item>
+        <item>DAM-M02 GBD</item>
+        <item>DAM-M03 PRO</item>
+        <item>DAM-M04 LMS</item>
+        <item>DAM-M05 EDE</item>
+        <item>DAM-M06 ADA</item>
+        <item>DAM-M07 INT</item>
+        <item>DAM-M08 PMM</item>
+        <item>DAM-M09 PSP</item>
+        <item>DAM-M10 SGE</item>
+        <item>DAM-M11 FOL</item>
+        <item>DAM-M12 EIE</item>
+        <item>DAM-M13 PRJ</item>
+        <item>DAM-M14 FCT</item>
+        <item>DAM-M15 ANG</item>
+    </string-array>
+
+    <string-array name="items3">
+        <item>DAM-M01 SIN</item>
+        <item>Sistemes informàtics</item>
+        <item>DAM-M02 GBD</item>
+        <item>Bases de dades</item>
+        <item>DAM-M03 PRO</item>
+        <item>Programació</item>
+        <item>DAM-M04 LMS</item>
+        <item>Llenguatge de marques i sistemes de gestió de la informació</item>
+        <item>DAM-M05 EDE</item>
+        <item>Entorns de desenvolupament</item>
+        <item>DAM-M06 ADA</item>
+        <item>Accés a dades</item>
+        <item>DAM-M07 INT</item>
+        <item>Desenvolupament d\'interfícies</item>
+        <item>DAM-M08 PMM</item>
+        <item>Programació multimèdia i dispositius mòbils</item>
+        <item>DAM-M09 PSP</item>
+        <item>Programació de serveis i processos</item>
+        <item>DAM-M10 SGE</item>
+        <item>Sistemes de gestió empresarial</item>
+        <item>DAM-M11 FOL</item>
+        <item>Formació i orientació laboral</item>
+        <item>DAM-M12 EIE</item>
+        <item>Empresa i iniciativa emprenedora</item>
+        <item>DAM-M13 PRJ</item>
+        <item>Projecte de desenvolupament d\'aplicacions multiplataforma</item>
+        <item>DAM-M14 FCT</item>
+        <item>Formació en centres de treball</item>
+        <item>DAM-M15 ANG</item>
+        <item>Anglès tècnic superior</item>
+    </string-array>
+</resources>

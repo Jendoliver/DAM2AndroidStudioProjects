@@ -24,7 +24,7 @@ public class UserDetailsActivity extends AppCompatActivity implements StucomGame
 {
     private RecyclerView rvUserScores;
     private ImageView userDetailsImg;
-    private TextView tvUsername, tvEmail;
+    private TextView tvUsername, tvEmail, tvFullName;
     private GameAsyncDAO gameDAO;
 
     private User user;
@@ -38,6 +38,7 @@ public class UserDetailsActivity extends AppCompatActivity implements StucomGame
         userDetailsImg = findViewById(R.id.userDetailsImg);
         tvUsername = findViewById(R.id.tvUsername);
         tvEmail = findViewById(R.id.tvEmail);
+        tvFullName = findViewById(R.id.tvFullName);
 
         Intent intent = getIntent();
         String json = intent.getStringExtra("userJson");
@@ -46,6 +47,7 @@ public class UserDetailsActivity extends AppCompatActivity implements StucomGame
         Picasso.with(this).load(user.getAvatarPath()).into(userDetailsImg);
         tvUsername.setText(user.getUsername());
         tvEmail.setText(user.getEmail());
+        tvFullName.setText(getString(R.string.userScores, user.getFullName()));
 
         fillRecyclerView();
     }

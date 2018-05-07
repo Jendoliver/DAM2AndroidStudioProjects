@@ -1,0 +1,15 @@
+171001:DAM-M01 SIN:Sistemes informàtics:1:198:Mar Fontana:t4
+171002:DAM-M02 GBD:Bases de dades:3:231:Alberto Milián:t3
+171003:DAM-M03 PRO:Programació:3:297:Daniel Moreno:t7
+171004:DAM-M04 LMS:Llenguatge de marques i sistemes de gestió de la informació:1:99:Cristian Catalán:t12
+171005:DAM-M05 EDE:Entorns de desenvolupament:2:66:Francesc Sanahuja:t3
+171006:DAM-M06 ADA:Accés a dades:2:132:Diana Padilla:t6
+171007:DAM-M07 INT:Desenvolupament d'interfícies:2:99:Ana Guillen:t4
+171008:DAM-M08 PMM:Programació multimèdia i dispositius mòbils:2:99:Fèlix Galindo:t0
+171009:DAM-M09 PSP:Programació de serveis i processos:2:99:Mar Fontana:t4
+171010:DAM-M10 SGE:Sistemes de gestió empresarial:2:99:Cristian Catalán:t12
+171011:DAM-M11 FOL:Formació i orientació laboral:1:99:Pedro Peña:t7
+171012:DAM-M12 EIE:Empresa i iniciativa emprenedora:1:66:Rubén Ibarra:t12
+171013:DAM-M13 PRJ:Projecte de desenvolupament d'aplicacions multiplataforma:2:99:Mar Fontana:t4
+171014:DAM-M14 FCT:Formació en centres de treball:2:317:Pilar Pau:t6
+171015:DAM-M15 ANG:Anglès tècnic superior:99:3:Alejandra Contreras:t4

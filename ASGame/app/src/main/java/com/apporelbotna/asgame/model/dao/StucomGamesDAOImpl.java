@@ -5,10 +5,10 @@ import android.content.Context;
 import com.apporelbotna.asgame.model.Game;
 import com.apporelbotna.asgame.model.Player;
 import com.apporelbotna.asgame.model.User;
-import com.apporelbotna.asgame.model.dao.search.AbstractSearchTask;
-import com.apporelbotna.asgame.model.dao.search.GameSearchTask;
-import com.apporelbotna.asgame.model.dao.search.PlayersFromGameSearchTask;
-import com.apporelbotna.asgame.model.dao.search.UserGameScoresSearchTask;
+import com.apporelbotna.asgame.model.dao.search.AbstractAsyncTask;
+import com.apporelbotna.asgame.model.dao.search.SearchGameAsyncTask;
+import com.apporelbotna.asgame.model.dao.search.SearchPlayersFromGameAsyncTask;
+import com.apporelbotna.asgame.model.dao.search.SearchUserScoresAsyncTask;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import java.util.List;
  * Created by Jandol on 02/13/2018.
  */
 
-public class StucomGamesDAOImpl implements GameAsyncDAO, AbstractSearchTask.WeakReference
+public class StucomGamesDAOImpl implements GameAsyncDAO, AbstractAsyncTask.WeakReference
 {
     private Context context;
 
@@ -215,21 +215,21 @@ public class StucomGamesDAOImpl implements GameAsyncDAO, AbstractSearchTask.Weak
     @Override
     public void findPlayers(Game game)
     {
-        PlayersFromGameSearchTask task = new PlayersFromGameSearchTask(this);
+        SearchPlayersFromGameAsyncTask task = new SearchPlayersFromGameAsyncTask(this);
         task.execute(game.getId());
     }
 
     @Override
     public void findGames()
     {
-        GameSearchTask task = new GameSearchTask(this);
+        SearchGameAsyncTask task = new SearchGameAsyncTask(this);
         task.execute();
     }
 
     @Override
     public void findScores(User user)
     {
-        UserGameScoresSearchTask task = new UserGameScoresSearchTask(this);
+        SearchUserScoresAsyncTask task = new SearchUserScoresAsyncTask(this);
         task.execute(user.getId());
     }
 

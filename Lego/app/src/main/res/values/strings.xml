@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lego</string>
+    <string name="apiKey" translatable="false">f7c5fe2407440c5e92ab5d5c38d59a90</string>
+    <string name="searchUrl">https://rebrickable.com/api/v3/lego/sets/?key=%s&amp;search=%s</string>
+    <string name="legoSetNumParts">%d parts</string>
+    <string name="legoSetYear"></string>
+</resources>

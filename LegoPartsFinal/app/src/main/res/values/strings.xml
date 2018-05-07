@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LegoParts</string>
+    <string name="searchHint">Write something</string>
+    <string name="apiKey" translatable="false">f16ec03a11098e3a023b16ea6a38b435</string>
+    <string name="searchUrl" translatable="false">https://rebrickable.com/api/v3/lego/sets/?key=%s&amp;search=%s</string>
+    <string name="searchPartsUrl" translatable="false">https://rebrickable.com/api/v3/lego/sets/%s/parts?key=%s</string>
+    <string name="numParts">%d parts</string>
+    <string name="year">Year %d</string>
+    <string name="empty">Download failed. Sorry!</string>
+    <string name="search">Search</string>
+</resources>
