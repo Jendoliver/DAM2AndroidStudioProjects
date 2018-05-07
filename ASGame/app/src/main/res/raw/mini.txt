@@ -27,5 +27,5 @@ COIN    = 19,3
 COIN    = 20,4
 COIN    = 21,6
 CRAB    = 0,10,14
-DOOR    = 15,13
+DOOR    = 27,13
 BOOSTER = 8,6

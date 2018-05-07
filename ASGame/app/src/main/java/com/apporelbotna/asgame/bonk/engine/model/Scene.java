@@ -22,7 +22,11 @@ import java.util.List;
 
 public class Scene
 {
-    private static final int[] LEVELS = { R.raw.mini, R.raw.scene, R.raw.scene2 };
+    private static final int[] LEVELS = {
+            R.raw.jendoliver,
+            R.raw.mini,
+            R.raw.scene,
+            R.raw.scene2 };
     private int currentLevel;
 
     private String scene[];
@@ -96,9 +100,8 @@ public class Scene
 
     public void loadNextLevel()
     {
-        currentLevel++;
-        if(currentLevel < LEVELS.length)
-            loadFromFile(LEVELS[currentLevel]);
+        currentLevel = (currentLevel + 1) % LEVELS.length; // TODO end the game at some point ... ?
+        loadFromFile(LEVELS[currentLevel]);
     }
 
     public void loadFirstLevel()
