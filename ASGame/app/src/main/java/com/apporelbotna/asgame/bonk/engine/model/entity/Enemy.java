@@ -1,4 +1,6 @@
-package com.apporelbotna.asgame.bonk.engine.model;
+package com.apporelbotna.asgame.bonk.engine.model.entity;
+
+import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
 
 abstract public class Enemy extends Character
 {

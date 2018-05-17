@@ -1,7 +1,13 @@
-package com.apporelbotna.asgame.bonk.engine.model;
+package com.apporelbotna.asgame.bonk.engine.model.entity;
 
 import android.view.KeyEvent;
 import android.view.MotionEvent;
+
+import com.apporelbotna.asgame.bonk.engine.model.Audio;
+import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
+import com.apporelbotna.asgame.bonk.engine.model.Camera;
+import com.apporelbotna.asgame.bonk.engine.model.Input;
+import com.apporelbotna.asgame.bonk.engine.model.Scene;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -10,7 +16,7 @@ import java.util.TimerTask;
  * Created by Jandol on 04/25/2018.
  */
 
-public abstract class Player extends com.apporelbotna.asgame.bonk.engine.model.Character
+public abstract class Player extends Character
 {
     protected Input input;
     protected Camera camera;
@@ -37,6 +43,11 @@ public abstract class Player extends com.apporelbotna.asgame.bonk.engine.model.C
     public int getScore()
     {
         return score;
+    }
+
+    public void setScore(int score)
+    {
+        this.score = score;
     }
 
     public int getMaxLives()

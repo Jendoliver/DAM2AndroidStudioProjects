@@ -1,4 +1,4 @@
-package com.apporelbotna.asgame.bonk.engine.model;
+package com.apporelbotna.asgame.bonk.engine.model.entity;
 
 import android.graphics.Canvas;
 
@@ -6,7 +6,7 @@ import android.graphics.Canvas;
  * Created by Jandol on 04/25/2018.
  */
 
-public interface Drawable
+public interface IDrawable
 {
     void draw(Canvas canvas);
 }

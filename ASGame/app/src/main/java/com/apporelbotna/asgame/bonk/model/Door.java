@@ -1,12 +1,13 @@
 package com.apporelbotna.asgame.bonk.model;
 
 import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Character;
 
 /**
  * Created by Jandol on 05/07/2018.
  */
 
-public class Door extends com.apporelbotna.asgame.bonk.engine.model.Character
+public class Door extends Character
 {
     public static final int SCORE_PER_LEVEL = 50;
 

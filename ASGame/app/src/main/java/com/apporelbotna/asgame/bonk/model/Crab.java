@@ -1,7 +1,7 @@
 package com.apporelbotna.asgame.bonk.model;
 
 import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
-import com.apporelbotna.asgame.bonk.engine.model.Enemy;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Enemy;
 
 public class Crab extends Enemy
 {

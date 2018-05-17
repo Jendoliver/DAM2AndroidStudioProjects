@@ -1,10 +1,11 @@
 package com.apporelbotna.asgame.bonk.model;
 
 import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Character;
 
-public class Coin extends com.apporelbotna.asgame.bonk.engine.model.Character
+public class Coin extends Character
 {
-    public static final int SCORE_PER_COIN = 10;
+    public static final transient int SCORE_PER_COIN = 10;
 
     public Coin(BitmapSet bitmapSet, int x, int y)
     {

@@ -1,6 +1,8 @@
 package com.apporelbotna.asgame.view;
 
+import android.content.SharedPreferences;
 import android.media.AudioManager;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -13,7 +15,7 @@ import com.apporelbotna.asgame.bonk.view.GameView;
 
 public class GameActivity extends AppCompatActivity
 {
-    GameEngine gameEngine;
+    private GameEngine gameEngine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,6 +37,8 @@ public class GameActivity extends AppCompatActivity
         // Create the engine
         gameEngine = new GameEngine(this, gameView);
         gameEngine.start();
+
+        loadGame();
     }
 
     // Delegate methods to GameEngine
@@ -43,14 +47,16 @@ public class GameActivity extends AppCompatActivity
     public void onResume()
     {
         super.onResume();
+        loadGame();
         gameEngine.resume();
     }
 
     @Override
     public void onPause()
     {
-        super.onPause();
+        saveGame();
         gameEngine.pause();
+        super.onPause();
     }
 
     @Override
@@ -65,5 +71,22 @@ public class GameActivity extends AppCompatActivity
     public boolean dispatchKeyEvent(KeyEvent event)
     {
         return (gameEngine == null) || gameEngine.onKeyEvent(event);
+    }
+
+    public void loadGame()
+    {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String game = prefs.getString("game", "");
+
+        if(game != null && !game.isEmpty())
+            gameEngine.loadGame(game);
+    }
+
+    public void saveGame()
+    {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("game", gameEngine.saveGame());
+        editor.apply();
     }
 }

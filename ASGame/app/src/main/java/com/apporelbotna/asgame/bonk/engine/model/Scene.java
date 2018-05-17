@@ -8,6 +8,8 @@ import android.util.SparseIntArray;
 import android.widget.Toast;
 
 import com.apporelbotna.asgame.R;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Enemy;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Player;
 import com.apporelbotna.asgame.bonk.model.Booster;
 import com.apporelbotna.asgame.bonk.model.Coin;
 import com.apporelbotna.asgame.bonk.model.Crab;
@@ -91,6 +93,21 @@ public class Scene
     public int getScaledWidth()
     {
         return player.getCamera().getScaledWidth();
+    }
+
+    public BitmapSet getBitmapSet()
+    {
+        return bitmapSet;
+    }
+
+    public int getCurrentLevel()
+    {
+        return currentLevel;
+    }
+
+    public void setCurrentLevel(int currentLevel)
+    {
+        this.currentLevel = currentLevel;
     }
 
     public boolean isPaused()
@@ -265,9 +282,28 @@ public class Scene
         return coins;
     }
 
+    public void setCoins(List<Coin> coins)
+    {
+        this.coins = coins;
+    }
+
     public List<Enemy> getEnemies()
     {
         return enemies;
+    }
+
+    public void setEnemies(List<Enemy> enemies)
+    {
+        this.enemies = enemies;
+    }
+
+    public List<Crab> getCrabs()
+    {
+        List<Crab> crabs = new ArrayList<>();
+        for(Enemy enemy : enemies)
+            if(enemy instanceof Crab)
+                crabs.add((Crab)enemy);
+        return crabs;
     }
 
     public List<Booster> getBoosters()

@@ -14,25 +14,20 @@ public class GameEngine
     private static final int UPDATE_DELAY = 50;             // 50ms             => 20 physics/sec
     private static final int INVALIDATES_PER_UPDATE = 2;    // 2 * 50ms = 100ms => 10 redraws/sec
 
+    private Context context;
     private GameView gameView;
     private Handler handler;
     private Scene scene;
-    private Input input;
-
-    public Input getInput()
-    {
-        return input;
-    }
 
     public GameEngine(Context context, GameView gameView)
     {
+        this.context = context;
         // Initialize everything
         Audio.create(context);
 
         // Relate to the game view
         this.gameView = gameView;
         gameView.setGameEngine(this);
-        input = new Input();
 
         // Load Scene
         BitmapSet bitmapSet = new BitmapSet(context);
@@ -40,7 +35,7 @@ public class GameEngine
         scene.loadFirstLevel();
 
         // Create Bonk
-        scene.setPlayer(new Bonk(bitmapSet, input, scene, Bonk.INITIAL_X, Bonk.INITIAL_Y));
+        scene.setPlayer(new Bonk(bitmapSet, new Input(), scene, Bonk.INITIAL_X, Bonk.INITIAL_Y));
         scene.getPlayer().setCamera(new Camera(scene));
 
         // Program the Handler for engine refresh (physics et al)
@@ -133,6 +128,27 @@ public class GameEngine
         canvas.restore();
 
         scene.drawGUI(canvas);
+    }
+
+    public String saveGame()
+    {
+        return new GameData(scene).toJson();
+    }
+
+    public void loadGame(String json)
+    {
+        GameData gameData = GameData.fromJson(json);
+        final BitmapSet bitmapSet = new BitmapSet(context);
+        gameData.levelCoins.forEach(c -> c.setBitmapSet(bitmapSet));
+        gameData.getEnemies().forEach(e -> e.setBitmapSet(bitmapSet));
+
+        scene.setCurrentLevel(gameData.currentLevel);
+        scene.getPlayer().setX(gameData.playerX);
+        scene.getPlayer().setY(gameData.playerY);
+        scene.getPlayer().setScore(gameData.playerScore);
+        scene.getPlayer().setLives(gameData.playerLives);
+        scene.setCoins(gameData.levelCoins);
+        scene.setEnemies(gameData.getEnemies());
     }
 
 }

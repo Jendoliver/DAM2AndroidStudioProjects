@@ -4,9 +4,9 @@ import android.graphics.Rect;
 
 import com.apporelbotna.asgame.bonk.engine.model.Audio;
 import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
-import com.apporelbotna.asgame.bonk.engine.model.Enemy;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Enemy;
 import com.apporelbotna.asgame.bonk.engine.model.Input;
-import com.apporelbotna.asgame.bonk.engine.model.Player;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Player;
 import com.apporelbotna.asgame.bonk.engine.model.Scene;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class Bonk extends Player
 
     public static final int INITIAL_X = 100;
     public static final int INITIAL_Y = 0;
-    public static final int MAX_LIVES = 1;
+    public static final int MAX_LIVES = 3;
 
     private static final int[][] ANIMATIONS = new int[][]{
             {12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 14, 14, 14, 14, 13}, // 0: standing by
@@ -60,13 +60,45 @@ public class Bonk extends Player
         super(bitmapSet, input, scene, MAX_LIVES);
         this.scene = scene;
         this.respawnAt(x, y);
+        boostTimer = new Timer();
+    }
+    @Override
+    public Rect getCollisionRect()
+    {
+        return (state == 3) ? null : collisionRect;
     }
 
-    private void respawnAt(int x, int y)
+    @Override
+    public int[][] getAnimations()
     {
-        this.x = x;
-        this.y = y;
-        this.vx = ORIGINAL_SPEED;
+        return ANIMATIONS;
+    }
+
+    @Override
+    public void outOfLives()
+    {
+        score = 0;
+        lives = getMaxLives();
+        scene.loadFirstLevel();
+    }
+
+    public void boost()
+    {
+        if(vx != ORIGINAL_SPEED)
+        {
+            boostTimer.cancel();
+            boostTimer.purge();
+        }
+        vx = ORIGINAL_SPEED * 2;
+        boostTimer = new Timer();
+        boostTimer.schedule(new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                vx = ORIGINAL_SPEED;
+            }
+        }, Booster.TIME_IN_MILLIS);
     }
 
     private void changeState(int state)
@@ -104,6 +136,13 @@ public class Bonk extends Player
             }
         }, 2000);
 
+    }
+
+    private void respawnAt(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+        this.vx = ORIGINAL_SPEED;
     }
 
     @Override
@@ -253,6 +292,7 @@ public class Bonk extends Player
                 if (this.collisionRect.intersect(enemy.getCollisionRect()))
                 {
                     this.die();
+                    break;
                 }
             }
         }
@@ -281,39 +321,5 @@ public class Bonk extends Player
                 x + PAD_LEFT + COLLISION_BOX_WIDTH,
                 y + PAD_TOP + COLLISION_BOX_HEIGHT
         );
-    }
-
-    @Override
-    public Rect getCollisionRect()
-    {
-        return (state == 3) ? null : collisionRect;
-    }
-
-    @Override
-    public int[][] getAnimations()
-    {
-        return ANIMATIONS;
-    }
-
-    @Override
-    public void outOfLives()
-    {
-        score = 0;
-        lives = getMaxLives();
-        scene.loadFirstLevel();
-    }
-
-    public void boost()
-    {
-        vx = ORIGINAL_SPEED * 2;
-        boostTimer = new Timer();
-        boostTimer.schedule(new TimerTask()
-        {
-            @Override
-            public void run()
-            {
-                vx = ORIGINAL_SPEED;
-            }
-        }, Booster.TIME_IN_MILLIS);
     }
 }

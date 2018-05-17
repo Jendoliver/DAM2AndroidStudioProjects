@@ -1,12 +1,13 @@
 package com.apporelbotna.asgame.bonk.model;
 
 import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
+import com.apporelbotna.asgame.bonk.engine.model.entity.Character;
 
 /**
  * Created by Jandol on 05/07/2018.
  */
 
-public class Booster extends com.apporelbotna.asgame.bonk.engine.model.Character
+public class Booster extends Character
 {
     public static final int TIME_IN_MILLIS = 10000;
 

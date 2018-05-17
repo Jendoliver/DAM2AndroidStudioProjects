@@ -41,6 +41,7 @@ public class Input
 
     public void pause()
     {
+        Audio.getInstance().pause();
         pause = true;
     }
 

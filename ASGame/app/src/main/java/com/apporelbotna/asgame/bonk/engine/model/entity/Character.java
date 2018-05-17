@@ -1,21 +1,28 @@
-package com.apporelbotna.asgame.bonk.engine.model;
+package com.apporelbotna.asgame.bonk.engine.model.entity;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 
-// Un Character es Drawable, PhysicsActor y
-public abstract class Character implements Drawable, PhysicObject
+import com.apporelbotna.asgame.bonk.engine.model.BitmapSet;
+
+// Un Character es IDrawable, PhysicsActor y
+public abstract class Character extends PhysicBody implements IDrawable
 {
-    private Paint paint;
-    protected int x, y, state, sprite;
-    protected Rect collisionRect;
-    private BitmapSet bitmapSet;
+    private transient Paint paint;
+    protected int x, y;
+    protected transient int state, sprite;
+    private transient BitmapSet bitmapSet;
 
     public int getX()
     {
         return x;
+    }
+
+    public void setX(int x)
+    {
+        this.x = x;
     }
 
     public int getY()
@@ -23,10 +30,17 @@ public abstract class Character implements Drawable, PhysicObject
         return y;
     }
 
+    public void setY(int y)
+    {
+        this.y = y;
+    }
+
     public int getState()
     {
         return state;
     }
+
+    public Character() { }
 
     public Character(BitmapSet bitmapSet)
     {
@@ -44,6 +58,11 @@ public abstract class Character implements Drawable, PhysicObject
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.YELLOW);
         this.collisionRect = new Rect();
+    }
+
+    public void setBitmapSet(BitmapSet bitmapSet)
+    {
+        this.bitmapSet = bitmapSet;
     }
 
     public int[][] getAnimations()
